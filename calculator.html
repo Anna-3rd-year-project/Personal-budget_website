@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Budget Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function calculateBudget() {
+            var income = parseFloat(document.getElementById("income").value) || 0;
+            var expenses = parseFloat(document.getElementById("expenses").value) || 0;
+            var balance = income - expenses;
+
+            document.getElementById("result").innerHTML =
+                "Remaining Balance: N$ " + balance.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Budget Calculator</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Budgeting</a>
+    <a href="budget-tips.html">Budget Tips</a>
+    <a href="savings.html">Savings Guide</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+    <h2>Calculate Your Monthly Budget</h2>
+
+    <label>Monthly Income:</label><br>
+    <input type="number" id="income"><br><br>
+
+    <label>Total Expenses:</label><br>
+    <input type="number" id="expenses"><br><br>
+
+    <button onclick="calculateBudget()">Calculate</button>
+
+    <h3 id="result"></h3>
+</div>
+
+<footer>
+    <p>AE's Personal Budget Website</p>
+</footer>
+
+</body>
+</html>
